@@ -13,10 +13,10 @@
 
 ### Tasks:
 
-1. ![Screen Shot 2018-09-18 at 11.10.28.png](images/task1.png =949x624)
+1. ![Screen Shot 2018-09-18 at 11.10.28.png](https://ibb.co/kMyPbp)
 
-2. ![Screen Shot 2018-09-25 at 12.30.12.png](images/task2.png =691x626)
+2. ![Screen Shot 2018-09-25 at 12.30.12.png](https://ibb.co/hNye99)
 
-3. ![Screen Shot 2018-09-25 at 12.31.39.png](images/task3.png =1390x471)
+3. ![Screen Shot 2018-09-25 at 12.31.39.png](https://ibb.co/iMS6p9)
 
-4. ![Screen Shot 2018-09-25 at 12.32.07.png](images/task4.png =1391x675)
+4. ![Screen Shot 2018-09-25 at 12.32.07.png](https://ibb.co/hqP82U)
