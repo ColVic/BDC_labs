@@ -1,0 +1,8 @@
+ALTER TABLE dbo.grupe
+	ALTER COLUMN Cod_Grupa CHAR(6) NOT NULL;
+
+ALTER TABLE dbo.grupe
+	ADD CONSTRAINT UNQ_Cod_Grupa UNIQUE(Cod_Grupa);
+
+ALTER TABLE dbo.grupe
+	ADD CONSTRAINT PK_Id_Grupa PRIMARY KEY(Id_Grupa);

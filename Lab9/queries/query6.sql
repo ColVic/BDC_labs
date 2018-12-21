@@ -1,0 +1,33 @@
+---first
+DROP FUNCTION IF EXISTS FUNCT1;
+GO
+CREATE FUNCTION FUNCT1 (@LETTER VARCHAR(255))
+RETURNS TABLE
+WITH ENCRYPTION
+AS
+	RETURN
+	(SELECT *
+	FROM studenti.studenti
+	WHERE Nume_Student LIKE @LETTER);
+GO
+SELECT *
+FROM FUNCT1('%u')
+
+
+--second
+DROP FUNCTION IF EXISTS FUNCT2;
+GO
+CREATE FUNCTION FUNCT2 (@MARK DECIMAL(4,2))
+RETURNS TABLE
+WITH ENCRYPTION
+AS
+	RETURN
+	(SELECT Disciplina, AVG(Nota) AS AvgMark
+		FROM plan_studii.discipline AS C, studenti.studenti_reusita AS D
+		WHERE C.Id_Disciplina = D.Id_Disciplina and
+		Tip_Evaluare = 'Examen'
+		GROUP BY Disciplina
+		HAVING AVG(Nota) > @Mark);
+GO
+SELECT *
+FROM FUNCT2(7.0)

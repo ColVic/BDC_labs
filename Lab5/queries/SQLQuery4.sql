@@ -1,0 +1,34 @@
+DECLARE @N1 INT, @N2 INT, @N3 INT;
+DECLARE @MAX INT;
+SET @N1 = 60 * RAND();
+SET @N2 = 60 * RAND();
+SET @N3 = 60 * RAND();
+
+BEGIN TRY
+IF @N1 > 0
+	BEGIN 
+		RAISERROR ('Custom Error', 16, 1)
+	END
+END TRY
+BEGIN CATCH
+	PRINT 'An error occured'
+END CATCH
+
+IF @N1 > @N2
+	BEGIN
+		SET @MAX = @N1
+	END
+ELSE 
+	BEGIN
+		SET @MAX = @N2
+	END
+
+IF @N3 > @MAX
+	BEGIN
+		SET @MAX = @N3
+	END
+
+PRINT @N1;
+PRINT @N2;
+PRINT @N3;
+PRINT 'Mai mare = ' + CAST(@MAX AS VARCHAR(2));
